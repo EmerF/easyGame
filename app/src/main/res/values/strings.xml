@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">easyGame</string>
+    <string name="app_name">Easy Game</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="facebook_app_id">409752582553987</string>
+    <string name="title_activity_menu">Menu Principal</string>
+    <string name="title_activity_separar_times">SepararTimesActivity</string>
+    <string name="title_activity_buscar_praticantes">BuscarPraticantesActivity</string>
 </resources>

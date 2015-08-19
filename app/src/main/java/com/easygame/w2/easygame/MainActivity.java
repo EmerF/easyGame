@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_main);
         info = (TextView)findViewById(R.id.info);
@@ -36,14 +36,15 @@ public class MainActivity extends Activity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                info.setText(
-                        "Você logou com o FaceBook: "
+               /* info.setText(
+                        "Voce logou com o FaceBook: "
                                 + loginResult.getAccessToken().getUserId()
                                 + "\n" +
                                 "Auth Token: "
                                 + loginResult.getAccessToken().getToken()
-                );
+                );*/
 
+               newTela();
             }
 
             @Override
@@ -60,6 +61,10 @@ public class MainActivity extends Activity {
 
             }
         });
+    }
+    public void newTela(){
+
+    startActivity(new Intent(getApplicationContext(), menuActivity.class));
     }
     @Override
     protected void onResume() {
