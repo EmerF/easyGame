@@ -7,5 +7,6 @@
     <string name="title_activity_menu">Menu Principal</string>
     <string name="title_activity_separar_times">Separar Times</string>
     <string name="title_activity_buscar_praticantes">Buscar Praticantes</string>
-    <string name="texto_Combo">Posiçõe</string>
+    <string name="texto_Combo">Posições</string>
+    <string name="title_activity_item_user">Item_user</string>
 </resources>

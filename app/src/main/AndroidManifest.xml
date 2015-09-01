@@ -40,6 +40,10 @@
             android:name=".BuscarPraticantesActivity"
             android:label="@string/title_activity_buscar_praticantes" >
         </activity>
+        <activity
+            android:name=".Item_user"
+            android:label="@string/title_activity_item_user" >
+        </activity>
     </application>
 
 </manifest>
