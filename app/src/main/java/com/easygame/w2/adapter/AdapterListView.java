@@ -80,8 +80,8 @@ public class AdapterListView extends BaseAdapter {
         //pega os dados da lista
         //e define os valores nos itens.
         Jogador item = itens.get(position);
-        itemHolder.nome.setText(item.getNome());
-        itemHolder.posicao.setText(item.getPosicao());
+        itemHolder.posicao.setText(item.getPosicao().toUpperCase()+"...................");
+        itemHolder.nome.setText(item.getNome().toUpperCase());
 
         //retorna a view com as informações
         return view;

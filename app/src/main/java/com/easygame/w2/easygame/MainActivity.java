@@ -2,16 +2,20 @@ package com.easygame.w2.easygame;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.easygame.w2.utils.CriarToast;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.Profile;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -21,11 +25,14 @@ public class MainActivity extends Activity {
     private TextView info;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
+    Profile profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        if(profile != null) {
+            CarregarMenuPrincipal();
+        }
         FacebookSdk.sdkInitialize(getApplicationContext());
         //setContentView(R.layout.activity_main);
         callbackManager = CallbackManager.Factory.create();
@@ -43,8 +50,12 @@ public class MainActivity extends Activity {
                                 "Auth Token: "
                                 + loginResult.getAccessToken().getToken()
                 );*/
+                profile = Profile.getCurrentProfile();
+                if(profile != null){
 
-               newTela();
+                    CriarToast.CriarToast(getApplicationContext(),"Olá " +profile.getFirstName());
+                }
+                CarregarMenuPrincipal();
             }
 
             @Override
@@ -62,10 +73,21 @@ public class MainActivity extends Activity {
             }
         });
     }
-    public void newTela(){
+    public void CarregarMenuPrincipal(){
 
     startActivity(new Intent(getApplicationContext(), menuActivity.class));
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(profile != null){
+            CarregarMenuPrincipal();
+
+        }
+
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
