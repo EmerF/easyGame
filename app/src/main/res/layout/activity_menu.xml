@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.easygame.w2.easygame.menuActivity">
+
+    <TextView android:text="Easy Game Menu Principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tituloMenuPrincipal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </TextView>
+
+    <!--<ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/listViewMenu"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Separar Times"
+        android:id="@+id/btMenuSepararTimes"
+        android:layout_below="@+id/tituloMenuPrincipal"
+        android:layout_alignRight="@+id/tituloMenuPrincipal"
+        android:layout_alignEnd="@+id/tituloMenuPrincipal"
+        android:layout_marginTop="54dp"
+        android:layout_alignLeft="@+id/tituloMenuPrincipal"
+        android:layout_alignStart="@+id/tituloMenuPrincipal"
+        android:onClick="abrirCadastrarJogadores()"
+        />
+        <!-- android:onClick=""!-->
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar Praticantes"
+        android:id="@+id/btMenuBuscarPraticantes"
+        android:layout_below="@+id/btMenuSepararTimes"
+        android:layout_alignLeft="@+id/btMenuSepararTimes"
+        android:layout_alignStart="@+id/btMenuSepararTimes"
+        android:layout_alignRight="@+id/btMenuSepararTimes"
+        android:layout_alignEnd="@+id/btMenuSepararTimes" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGOFF"
+        android:id="@+id/btLogOff"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/btMenuBuscarPraticantes"
+        android:layout_alignStart="@+id/btMenuBuscarPraticantes"
+        android:layout_alignRight="@+id/btMenuBuscarPraticantes"
+        android:layout_alignEnd="@+id/btMenuBuscarPraticantes" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu Carros"
+        android:id="@+id/btMenuCarros"
+        android:layout_below="@+id/btLogOff"
+        android:layout_alignLeft="@+id/btLogOff"
+        android:layout_alignStart="@+id/btLogOff" />
+
+
+</RelativeLayout>
